@@ -118,8 +118,7 @@ button {
 		0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .page-header-container {
-	padding-top: 24px;
-	padding-bottom: 24px;
+	
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -457,6 +456,7 @@ button {
 }
 .customers-list {
 	display: flex;
+	justify-content: center;
 }
 .customers-item {
 	height: 88px;
@@ -673,6 +673,8 @@ button {
 	.main-nav {
 		display: flex;
 		align-items: center;
+		padding-top: 24px;
+		padding-bottom: 24px;
 	}
 	.main-nav-link {
 		color: var(--dark-color);
@@ -680,6 +682,7 @@ button {
 	.main-nav-list {
 		display: flex;
 		justify-content: space-between;
+		
 	}
 	.main-nav-item:not(:last-child) {
 		margin-right: 40px;
@@ -692,15 +695,20 @@ button {
 		padding-top: 24px;
 		padding-bottom: 24px;
 	}
-
+	.header-address-item:first-child{
+		margin-bottom: 12px;
+	}
+.header-adress-list{
+	padding-top: 16px;
+		padding-bottom: 16px;
+}
 	.header-address-link {
 		color: var(--text-color);
 		font-weight: var(--body-font-weight);
 		font-size: var(--body-font-size);
 		line-height: var(--body-line-height);
 		letter-spacing: var(--body-letter-spacing);
-		padding-top: 24px;
-		padding-bottom: 24px;
+		
 	}
 	.main-nav-link,
 	.header-address-item > .header-address-link {
@@ -766,7 +774,7 @@ button {
 		column-gap: 24px;
 	}
 	.customers-item {
-		width: calc((100% - 2 * 24px) / 3);
+		width: 168px;
 	}
 	.basement {
 		padding-top: 96px;
@@ -778,6 +786,7 @@ button {
 	}
 	.basement-left-side {
 		display: flex;
+		margin-bottom: 72px;
 	}
 	.basement-left > .main-text {
 		max-width: 264px;
@@ -818,20 +827,27 @@ display: flex;
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
 	screen and (min-resolution: 192dpi) and (min-width: 768px),
 	screen and (min-resolution: 2dppx) and (min-width: 768px) {
-	.banner {
+	.hero {
 		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
 			url(../images/hero/people-office-tablet@2x.jpg);
 	}
 }
 @media screen and (min-width: 1158px) {
 	.container {
-		width: 1128px;
+		width: 1158px;
 	}
 	.logo {
 		margin-right: 78px;
 	}
 	.header-adress-list {
 		display: flex;
+	}
+	.header-adress-list{
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+	.header-address-item:first-child{
+		margin-bottom: 0;
 	}
 	.header-address-item:not(:last-child) {
 		margin-right: 40px;
@@ -843,10 +859,17 @@ display: flex;
 	.hero {
 		padding-top: 188px;
 		padding-bottom: 188px;
+		max-width: 1440px;
 	}
 	.main-title {
 		margin: 0 auto 48px auto;
 	}
+	.principles,
+.team,
+.customers {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
 	.principles-icon-block {
 		display: flex;
 		justify-content: center;
@@ -885,9 +908,7 @@ display: flex;
 	.customers-list {
 		flex-wrap: nowrap;
 	}
-	.customers-item {
-		width: calc((100% - 5 * 24px) / 6);
-	}
+	
 	.basement > .container {
 		display: flex;
 	}
@@ -918,7 +939,7 @@ display: flex;
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1158px),
 	screen and (min-resolution: 192dpi) and (min-width: 1158px),
 	screen and (min-resolution: 2dppx) and (min-width: 1158px) {
-	.banner {
+	.hero {
 		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
 			url(../images/hero/people-office-desktop@2x.jpg);
 	}
@@ -947,7 +968,12 @@ display: flex;
 		display: none;
 	}
 }
+
+
 @media screen and (max-width: 767px) {
+	.page-header{
+		padding: 24px 0;
+	}
 	.mobile-menu-open-btn {
 		background-color: inherit;
 		padding: 0;
@@ -966,6 +992,7 @@ display: flex;
 		visibility: hidden;
 		opacity: 0;
 		pointer-events: none;
+		overflow: auto;
 	}
 	.mobile-menu.is-open {
 		visibility: visible;
@@ -1048,6 +1075,10 @@ display: flex;
 	.hero-modal {
 		padding: 72px 16px 24px 16px;
 	}
+	
+	.principles-item>.secondary-title{
+		text-align: center;
+	}
 	.principles-item:not(:last-child) {
 		margin-bottom: 72px;
 	}
@@ -1057,6 +1088,7 @@ display: flex;
 	.team-item:not(:last-child) {
 		margin-bottom: 72px;
 	}
+	
 	.basement-left {
 		max-width: 268px;
 		margin: 0 auto;
@@ -1102,7 +1134,7 @@ display: flex;
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
 	screen and (min-resolution: 192dpi) and (max-width: 767px),
 	screen and (min-resolution: 2dppx) and (max-width: 767px) {
-	.banner {
+	.hero {
 		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
 			url(../images/hero/people-office-mobile@2x.jpg);
 	}
